@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PrimeApp</title>
+    <title>Handy Invoice</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,7 +11,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#"><h3>Invoice</h3></a>
+      <a class="navbar-brand" href="#"><h3>Handy Invoice</h3></a>
       <div class="collapse navbar-collapse" id="navbarColor01">    
         <% if user_signed_in? %>
         <ul class="navbar-nav mr-auto">
@@ -35,20 +35,20 @@
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         </p>
         <% else %>
-        <ul class="navbar-nav mr-auto"></ul>
+       <!--  <ul class="navbar-nav mr-auto"></ul>
         <p class="navbar-text">
-          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-        </p>
+          <%#= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        </p> -->
         <% end %>
       </div>
     </nav>
     
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <!-- <p class="alert alert-success"><%#= notice %></p> -->
     <% end %>
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+     <!--  <p class="alert alert-danger"><%#= alert %></p> -->
     <% end %>
     
     <div class="jumbotron">
@@ -57,26 +57,14 @@
       </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Invoice</a>
-      <div class="collapse navbar-collapse" id="navbarColor01">  
-       <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>  
-       
+    <footer>
+      <!-- Copyright -->
+      <div class="footer-copyrigh py-3 navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar-brand">© 2019 Copyright:</div>
+        <a href="https://www.handyinvoice.shayonait.com"> Handy Invoice - Quick Invoicing for Small Business</a>
       </div>
-    </nav>
+      <!-- Copyright -->
+    </footer>
 
   </body>
 </html>
